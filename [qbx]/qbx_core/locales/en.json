@@ -1,174 +1,174 @@
 {
     "error": {
-        "not_online": "Player not online",
-        "wrong_format": "Incorrect format",
-        "missing_args": "Not every argument has been entered (x, y, z)",
-        "missing_args2": "All arguments must be filled out!",
-        "no_access": "No access to this command",
-        "company_too_poor": "Your employer is broke",
-        "item_not_exist": "Item does not exist",
-        "too_heavy": "Inventory too full",
-        "location_not_exist": "Location does not exist",
-        "duplicate_license": "Duplicate Rockstar License Found",
-        "no_valid_license":  "No Valid Rockstar License Found",
-        "not_whitelisted": "You're not whitelisted for this server",
-        "server_already_open": "The server is already open",
-        "server_already_closed": "The server is already closed",
-        "no_permission": "You don't have permissions for this..",
-        "no_waypoint": "No Waypoint Set.",
-        "tp_error": "Error While Teleporting.",
-        "connecting_database_timeout": "Connection to database timed out. (Is the SQL server on?)",
-        "connecting_error": "An error occurred while connecting to the server. (Check your server console)",
-        "no_match_character_registration": "Anything other than letters aren't allowed, trailing whitespaces aren't allowed either and words must start with a capital letter in input fields. You can however add words with spaces inbetween.",
-        "already_in_queue": "You are already in queue.",
-        "no_subqueue": "You were not let in any sub-queue."
+        "not_online": "Người chơi không trực tuyến",
+        "wrong_format": "Sai định dạng",
+        "missing_args": "Chưa nhập đủ tham số (x, y, z)",
+        "missing_args2": "Tất cả các tham số phải được điền đầy đủ!",
+        "no_access": "Không có quyền sử dụng lệnh này",
+        "company_too_poor": "Ngân sách của công ty/chủ sở hữu không đủ",
+        "item_not_exist": "Vật phẩm không tồn tại",
+        "too_heavy": "Túi đồ quá nặng",
+        "location_not_exist": "Địa điểm không tồn tại",
+        "duplicate_license": "Phát hiện bản quyền Rockstar bị trùng lặp",
+        "no_valid_license": "Không tìm thấy bản quyền Rockstar hợp lệ",
+        "not_whitelisted": "Bạn không có tên trong Whitelist của máy chủ này",
+        "server_already_open": "Máy chủ đã được mở từ trước",
+        "server_already_closed": "Máy chủ đã được đóng từ trước",
+        "no_permission": "Bạn không có quyền thực hiện việc này...",
+        "no_waypoint": "Chưa đặt điểm đánh dấu (Waypoint) trên bản đồ.",
+        "tp_error": "Lỗi khi đang dịch chuyển.",
+        "connecting_database_timeout": "Kết nối tới cơ sở dữ liệu quá hạn. (Máy chủ SQL có đang chạy không?)",
+        "connecting_error": "Đã xảy ra lỗi khi kết nối tới máy chủ. (Kiểm tra lại console server)",
+        "no_match_character_registration": "Các trường nhập liệu không được chứa ký tự đặc biệt, không để khoảng trắng thừa và phải viết hoa chữ cái đầu tiên của mỗi từ. Bạn có thể thêm dấu cách giữa các từ.",
+        "already_in_queue": "Bạn đã ở trong hàng chờ rồi.",
+        "no_subqueue": "Bạn không được chấp nhận vào bất kỳ hàng chờ phụ nào."
     },
     "success": {
-        "server_opened": "The server has been opened",
-        "server_closed": "The server has been closed",
-        "teleported_waypoint": "Teleported To Waypoint.",
-        "character_deleted": "Character deleted!",
-        "character_deleted_citizenid": "You successfully deleted the character with Citizen ID %s."
+        "server_opened": "Máy chủ đã được mở",
+        "server_closed": "Máy chủ đã được đóng",
+        "teleported_waypoint": "Đã dịch chuyển tới điểm đánh dấu.",
+        "character_deleted": "Đã xóa nhân vật!",
+        "character_deleted_citizenid": "Bạn đã xóa thành công nhân vật có mã công dân (Citizen ID) %s."
     },
     "info": {
-        "received_paycheck": "You received your paycheck of $%s",
-        "job_info": "Job: %s | Grade: %s | Duty: %s",
-        "gang_info": "Gang: %s | Grade: %s",
-        "on_duty": "You are now on duty!",
-        "off_duty": "You are now off duty!",
-        "checking_ban": "Hello %s. We are checking if you are banned.",
-        "join_server": "Welcome %s to %s.",
-        "checking_whitelisted": "Hello %s. We are checking your allowance.",
-        "exploit_banned": "You have been banned for cheating. Check our Discord for more information: %s",
-        "exploit_dropped": "You Have Been Kicked For Exploitation",
-        "multichar_title": "Qbox Multichar",
-        "multichar_new_character": "New Character #%s",
-        "char_male": "Male",
-        "char_female": "Female",
-        "play": "Play",
-        "play_description": "Play as %s",
-        "delete_character": "Delete Character",
-        "delete_character_description": "Delete %s",
-        "logout_command_help": "Logs you out of your current character",
-        "check_id": "Check your Server ID",
-        "deletechar_command_help": "Delete a players character",
-        "deletechar_command_arg_player_id": "Player ID",
-        "character_registration_title": "Character Registration",
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "nationality": "Nationality",
-        "gender": "Sex",
-        "birth_date": "Birth Date",
-        "select_gender": "Select your gender...",
-        "confirm_delete": "Are you sure you wish to delete this character?",
-        "in_queue": "🐌 You are %s/%s in queue. (%s) %s"
+        "received_paycheck": "Bạn đã nhận được phiếu lương trị giá $%s",
+        "job_info": "Nghề nghiệp: %s | Cấp bậc: %s | Làm việc: %s",
+        "gang_info": "Băng đảng: %s | Cấp bậc: %s",
+        "on_duty": "Bạn đã bắt đầu ca làm việc!",
+        "off_duty": "Bạn đã kết thúc ca làm việc!",
+        "checking_ban": "Xin chào %s. Chúng tôi đang kiểm tra trạng thái cấm (ban) của bạn.",
+        "join_server": "Chào mừng %s đến với %s.",
+        "checking_whitelisted": "Xin chào %s. Chúng tôi đang kiểm tra quyền truy cập của bạn.",
+        "exploit_banned": "Bạn đã bị cấm vì hành vi gian lận. Kiểm tra Discord để biết thêm thông tin: %s",
+        "exploit_dropped": "Bạn đã bị đuổi khỏi máy chủ vì hành vi khai thác lỗi (Exploitation)",
+        "multichar_title": "Qbox Đa Nhân Vật",
+        "multichar_new_character": "Nhân vật mới #%s",
+        "char_male": "Nam",
+        "char_female": "Nữ",
+        "play": "Chơi",
+        "play_description": "Vào game với nhân vật %s",
+        "delete_character": "Xóa nhân vật",
+        "delete_character_description": "Xóa %s",
+        "logout_command_help": "Đăng xuất khỏi nhân vật hiện tại",
+        "check_id": "Kiểm tra ID máy chủ của bạn",
+        "deletechar_command_help": "Xóa nhân vật của một người chơi",
+        "deletechar_command_arg_player_id": "ID Người chơi",
+        "character_registration_title": "Đăng ký nhân vật",
+        "first_name": "Tên",
+        "last_name": "Họ",
+        "nationality": "Quốc tịch",
+        "gender": "Giới tính",
+        "birth_date": "Ngày sinh",
+        "select_gender": "Chọn giới tính...",
+        "confirm_delete": "Bạn có chắc chắn muốn xóa nhân vật này không?",
+        "in_queue": "🐌 Bạn đang ở vị trí %s/%s trong hàng chờ. (%s) %s"
     },
     "command": {
         "tp": {
-            "help": "TP To Player or Coords (Admin Only)",
+            "help": "Dịch chuyển tới người chơi hoặc tọa độ (Chỉ Admin)",
             "params": {
-                "x": { "name": "id/x", "help": "ID of player or X position"},
-                "y": { "name": "y", "help": "Y position"},
-                "z": { "name": "z", "help": "Z position"}
+                "x": { "name": "id/x", "help": "ID người chơi hoặc vị trí X"},
+                "y": { "name": "y", "help": "Vị trí Y"},
+                "z": { "name": "z", "help": "Vị trí Z"}
             }
         },
-        "tpm": { "help": "TP To Marker (Admin Only)" },
-        "togglepvp": { "help": "Toggle PVP on the server (Admin Only)" },
+        "tpm": { "help": "Dịch chuyển tới điểm đánh dấu trên bản đồ (Chỉ Admin)" },
+        "togglepvp": { "help": "Bật/Tắt chế độ PVP trong máy chủ (Chỉ Admin)" },
         "addpermission": {
-            "help": "Give Player Permissions (God Only)",
+            "help": "Cấp quyền cho người chơi (Chỉ God)",
             "params": {
-                "id": { "name": "id", "help": "ID of player" },
-                "permission": { "name": "permission", "help": "Permission level" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "permission": { "name": "permission", "help": "Cấp độ quyền hạn" }
             }
         },
         "removepermission": {
-            "help": "Remove Player Permissions (God Only)",
+            "help": "Gỡ quyền của người chơi (Chỉ God)",
             "params": {
-                "id": { "name": "id", "help": "ID of player" },
-                "permission": { "name": "permission", "help": "Permission level" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "permission": { "name": "permission", "help": "Cấp độ quyền hạn" }
             }
         },
-        "openserver": { "help": "Open the server for everyone (Admin Only)" },
+        "openserver": { "help": "Mở máy chủ cho tất cả mọi người (Chỉ Admin)" },
         "closeserver": {
-            "help": "Close the server for people without permissions (Admin Only)",
+            "help": "Đóng máy chủ đối với những người không có quyền truy cập (Chỉ Admin)",
             "params": {
-                "reason": { "name": "reason", "help": "Reason for closing (optional)" }
+                "reason": { "name": "reason", "help": "Lý do đóng cửa (không bắt buộc)" }
             }
         },
         "car": {
-            "help": "Spawn Vehicle (Admin Only)",
+            "help": "Lấy xe (Chỉ Admin)",
             "params": {
-                "model": { "name": "model", "help": "Model name of the vehicle" },
-                "keepCurrentVehicle": { "name": "keepCurrentVehicle", "help": "Keep the vehicle you're in right now (leave empty to delete current vehicle)" }
+                "model": { "name": "model", "help": "Tên model của phương tiện" },
+                "keepCurrentVehicle": { "name": "keepCurrentVehicle", "help": "Giữ lại xe hiện tại (để trống để xóa xe cũ)" }
             }
         },
         "dv": {
-            "help": "Delete Vehicle (Admin Only)",
+            "help": "Xóa phương tiện (Chỉ Admin)",
             "params": {
-                "radius": { "name": "radius", "help": "Radius to delete vehicles in (meters)" }
+                "radius": { "name": "radius", "help": "Bán kính để xóa các phương tiện (mét)" }
             }
         },
         "givemoney": {
-            "help": "Give A Player Money (Admin Only)",
+            "help": "Tặng tiền cho người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "moneytype": { "name": "moneytype", "help": "Type of money (cash, bank, crypto)" },
-                "amount": { "name": "amount", "help": "Amount of money" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "moneytype": { "name": "moneytype", "help": "Loại tiền (cash, bank, crypto)" },
+                "amount": { "name": "amount", "help": "Số lượng tiền" }
             }
         },
         "setmoney": {
-            "help": "Set Players Money Amount (Admin Only)",
+            "help": "Thiết lập số tiền của người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "moneytype": { "name": "moneytype", "help": "Type of money (cash, bank, crypto)" },
-                "amount": { "name": "amount", "help": "Amount of money" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "moneytype": { "name": "moneytype", "help": "Loại tiền (cash, bank, crypto)" },
+                "amount": { "name": "amount", "help": "Số lượng tiền" }
             }
         },
-        "job": { "help": "Check Your Job" },
+        "job": { "help": "Kiểm tra công việc của bạn" },
         "setjob": {
-            "help": "Set A Players Job (Admin Only)",
+            "help": "Cấp việc làm cho người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" },
-                "grade": { "name": "grade", "help": "Job grade" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "job": { "name": "job", "help": "Tên công việc" },
+                "grade": { "name": "grade", "help": "Cấp bậc công việc" }
             }
         },
         "changejob": {
-            "help": "Change Active Job of Player (Admin Only)",
+            "help": "Thay đổi công việc đang hoạt động của người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "job": { "name": "job", "help": "Tên công việc" }
             }
         },
         "addjob": {
-            "help": "Add Job to Player (Admin Only)",
+            "help": "Thêm công việc vào danh sách của người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" },
-                "grade": { "name": "grade", "help": "Job grade" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "job": { "name": "job", "help": "Tên công việc" },
+                "grade": { "name": "grade", "help": "Cấp bậc công việc" }
             }
         },
         "removejob": {
-            "help": "Remove Job from Player (Admin Only)",
+            "help": "Xóa công việc khỏi người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "job": { "name": "job", "help": "Job name" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "job": { "name": "job", "help": "Tên công việc" }
             }
         },
-        "gang": { "help": "Check Your Gang" },
+        "gang": { "help": "Kiểm tra băng đảng của bạn" },
         "setgang": {
-            "help": "Set A Players Gang (Admin Only)",
+            "help": "Thiết lập băng đảng cho người chơi (Chỉ Admin)",
             "params": {
-                "id": { "name": "id", "help": "Player ID" },
-                "gang": { "name": "gang", "help": "Gang name" },
-                "grade": { "name": "grade", "help": "Gang grade" }
+                "id": { "name": "id", "help": "ID người chơi" },
+                "gang": { "name": "gang", "help": "Tên băng đảng" },
+                "grade": { "name": "grade", "help": "Cấp bậc trong băng" }
             }
         },
-        "ooc": { "help": "OOC Chat Message" },
+        "ooc": { "help": "Gửi tin nhắn chat ngoài nhân vật (OOC)" },
         "me": {
-            "help": "Show local message",
+            "help": "Hiển thị hành động nhân vật",
             "params": {
-                "message": { "name": "message", "help": "Message to send" }
+                "message": { "name": "message", "help": "Nội dung hành động" }
             }
         }
     }

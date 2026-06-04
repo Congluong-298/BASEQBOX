@@ -1,31 +1,31 @@
 {
     "error": {
-        "no_space": "Another vehicle has occupied the space.",
-        "no_access": "You don't have access to this garage",
-        "no_vehicles": "You currently have no vehicles at this location...",
-        "not_impound": "Your vehicle is not in impound",
-        "not_owned": "This vehicle can't be stored",
-        "not_correct_type": "You can't store this type of vehicle here",
-        "not_enough": "Not enough money",
-        "vehicle_occupied": "You can't store this vehicle as it is not empty",
-        "in_vehicle": "You're already in a vehicle...",
-        "spawn_in_progress": "Please wait for your vehicle to be delivered..."
+        "no_space": "Vị trí này đã bị một phương tiện khác chiếm chỗ.",
+        "no_access": "Bạn không có quyền truy cập vào gara này",
+        "no_vehicles": "Bạn hiện không có phương tiện nào tại vị trí này...",
+        "not_impound": "Phương tiện của bạn không nằm trong bãi tạm giữ",
+        "not_owned": "Phương tiện này không thể cất vào kho (không thuộc sở hữu)",
+        "not_correct_type": "Bạn không thể cất loại phương tiện này tại đây",
+        "not_enough": "Không đủ tiền",
+        "vehicle_occupied": "Bạn không thể cất phương tiện khi vẫn còn người bên trong",
+        "in_vehicle": "Bạn đang ở trong một phương tiện rồi...",
+        "spawn_in_progress": "Vui lòng đợi phương tiện của bạn đang được đưa đến..."
     },
     "success": {
-        "vehicle_parked": "Vehicle Stored"
+        "vehicle_parked": "Đã cất phương tiện thành công"
     },
     "menu": {
-        "information": "Information",
-        "description": "Name: %s\nPlate: %s\nImpound Fee: $%s",
-        "body": "Body",
-        "engine": "Engine",
-        "fuel": "Fuel",
-        "take_out": "Take Out",
-        "veh_impounded": "Your vehicle has been impounded by the police"
+        "information": "Thông tin",
+        "description": "Tên: %s\nBiển số: %s\nPhí chuộc xe: $%s",
+        "body": "Thân vỏ",
+        "engine": "Động cơ",
+        "fuel": "Nhiên liệu",
+        "take_out": "Lấy xe ra",
+        "veh_impounded": "Phương tiện của bạn đã bị cảnh sát tạm giữ"
     },
     "info": {
-        "car_e": "E - Open Garage",
-        "park_e": "E - Store Vehicle",
-        "impound_e": "E - Open Impound"
+        "car_e": "E - Mở Gara",
+        "park_e": "E - Cất phương tiện",
+        "impound_e": "E - Mở Bãi tạm giữ"
     }
 }

@@ -1,53 +1,53 @@
 {
     "error": {
-        "bled_out": "You have bled out..."
+        "bled_out": "Bạn đã chảy máu đến chết..."
     },
     "success": {
-        "wounds_healed": "Your wounds have been healed!"
+        "wounds_healed": "Vết thương của bạn đã được chữa lành!"
     },
     "info": {
-        "self_death": "Themselves or an NPC",
-        "wep_unknown": "Unknown",
-        "status": "Status Check",
-        "healthy": "You are completely healthy again!",
-        "pain_message": "Your %s feels %s",
-        "many_places": "You have pain in many places...",
-        "bleed_alert": "You are %s",
-        "revive_player_a": "Revive A Player or Yourself (Admin Only)",
-        "player_id": "Player ID (may be empty)",
-        "pain_level": "Set Yours or A Players Pain Level (Admin Only)",
-        "kill": "Kill A Player or Yourself (Admin Only)",
-        "heal_player_a": "Heal A Player or Yourself (Admin Only)"
+        "self_death": "Tự tử hoặc do NPC",
+        "wep_unknown": "Không xác định",
+        "status": "Kiểm tra tình trạng",
+        "healthy": "Bạn đã hoàn toàn khỏe mạnh!",
+        "pain_message": "Vùng %s của bạn cảm thấy %s",
+        "many_places": "Bạn bị đau ở nhiều chỗ...",
+        "bleed_alert": "Bạn đang %s",
+        "revive_player_a": "Hồi sinh một người chơi hoặc chính mình (Chỉ Admin)",
+        "player_id": "ID người chơi (có thể để trống)",
+        "pain_level": "Thiết lập mức độ đau cho mình hoặc người khác (Chỉ Admin)",
+        "kill": "Kết liễu một người chơi hoặc chính mình (Chỉ Admin)",
+        "heal_player_a": "Chữa trị cho một người chơi hoặc chính mình (Chỉ Admin)"
     },
     "states": {
-        "irritated": "irritated",
-        "quite_painful": "quite painful",
-        "painful": "painful",
-        "really_painful": "really painful",
-        "little_bleed": "bleeding a little bit...",
-        "bleed": "bleeding...",
-        "lot_bleed": "bleeding a lot...",
-        "big_bleed": "bleeding very much..."
+        "irritated": "hơi nhức",
+        "quite_painful": "khá đau",
+        "painful": "đau",
+        "really_painful": "rất đau",
+        "little_bleed": "chảy một ít máu...",
+        "bleed": "đang chảy máu...",
+        "lot_bleed": "chảy nhiều máu...",
+        "big_bleed": "chảy máu rất trầm trọng..."
     },
     "body": {
-        "head": "Head",
-        "neck": "Neck",
-        "spine": "Spine",
-        "upper_body": "Upper Body",
-        "lower_body": "Lower Body",
-        "left_arm": "Left Arm",
-        "left_hand": "Left Hand",
-        "left_fingers": "Left Fingers",
-        "left_leg": "Left Leg",
-        "left_foot": "Left Foot",
-        "right_arm": "Right Arm",
-        "right_hand": "Right Hand",
-        "right_fingers": "Right Fingers",
-        "right_leg": "Right Leg",
-        "right_foot": "Right Foot"
+        "head": "Đầu",
+        "neck": "Cổ",
+        "spine": "Cột sống",
+        "upper_body": "Thân trên",
+        "lower_body": "Thân dưới",
+        "left_arm": "Tay trái",
+        "left_hand": "Bàn tay trái",
+        "left_fingers": "Ngón tay trái",
+        "left_leg": "Chân trái",
+        "left_foot": "Bàn chân trái",
+        "right_arm": "Tay phải",
+        "right_hand": "Bàn tay phải",
+        "right_fingers": "Ngón tay phải",
+        "right_leg": "Chân phải",
+        "right_foot": "Bàn chân phải"
     },
     "logs": {
-        "death_log_title": "%s (%s) is dead",
-        "death_log_message": "%s has killed %s with a **%s** (%s)"
+        "death_log_title": "%s (%s) đã chết",
+        "death_log_message": "%s đã giết %s bằng **%s** (%s)"
     }
 }

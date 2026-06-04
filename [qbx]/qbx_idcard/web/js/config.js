@@ -9,25 +9,25 @@ const config = {
     },
     licenses: {
         'id_card': {
-            header: 'Identity',
+            header: 'Thẻ căn cước',
             background: '#ebf7fd',            
             backgroundImage: 'https://i.ibb.co/vxvGzg1/card.png',
             prop: 'prop_franklin_dl'
         },
         'driver_license': {
-            header: 'Driver License',
+            header: 'Giấy phép lái xe',
             background: '#febbbb',
             backgroundImage: 'https://i.ibb.co/vxvGzg1/card.png',
             prop: 'prop_franklin_dl',
         },
         'weaponlicense': {
-            header: 'Weapon License',
+            header: 'Giấy phép vũ khí',
             background: '#c7ffe5',
             backgroundImage: 'https://i.ibb.co/vxvGzg1/card.png',
             prop: 'prop_franklin_dl',
         },
         'lawyerpass': {
-            header: 'Lawyer Pass',
+            header: 'Thẻ Luật Sư',
             background: '#f9c491',
             backgroundImage: 'https://i.ibb.co/vxvGzg1/card.png',
             prop: 'prop_cs_r_business_card'

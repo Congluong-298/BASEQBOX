@@ -1,72 +1,72 @@
 {
     "notify": {
-        "no_access": "No access.",
-        "someone_at_door": "Someone is at your door!",
-        "keyholder": " has been added as a keyholder.",
-        "added_as_keyholder": "You have been added as a keyholder.",
-        "removed_as_keyholder": " has been removed as a keyholder."
+        "no_access": "Không có quyền truy cập.",
+        "someone_at_door": "Có người đang ở trước cửa nhà bạn!",
+        "keyholder": " đã được thêm vào danh sách giữ chìa khóa.",
+        "added_as_keyholder": "Bạn đã được thêm vào danh sách giữ chìa khóa.",
+        "removed_as_keyholder": " đã bị xóa khỏi danh sách giữ chìa khóa."
     },
     "alert": {
-        "give_keys": "Give keys to this person?",
-        "apartment_selection": "Apartment Selection",
-        "are_you_sure": "Are you sure you want to get %s?",
-        "want_remove_keys": "Do you want to remove keys from this person?",
-        "want_let_person_in": "Want to let this person in?",
-        "property_name": "Property Name",
-        "property_name_description": "A simple descriptive name of the property",
-        "price": "Price",
-        "price_description": "The purchasing price or the price deducted for rent",
-        "rent_interval": "Rent interval",
-        "rent_interval_description": "The interval in which the rent will be deducted in hours (makes the property rentable instead of purchasable)",
-        "add_garage": "Add Garage"
+        "give_keys": "Đưa chìa khóa cho người này?",
+        "apartment_selection": "Chọn căn hộ",
+        "are_you_sure": "Bạn có chắc chắn muốn lấy %s không?",
+        "want_remove_keys": "Bạn có muốn thu hồi chìa khóa từ người này không?",
+        "want_let_person_in": "Cho phép người này vào nhà?",
+        "property_name": "Tên bất động sản",
+        "property_name_description": "Một cái tên mô tả đơn giản cho bất động sản",
+        "price": "Giá",
+        "price_description": "Giá mua hoặc số tiền sẽ bị trừ để thuê nhà",
+        "rent_interval": "Chu kỳ thuê",
+        "rent_interval_description": "Khoảng thời gian trừ tiền thuê tính theo giờ (đặt thông số này sẽ biến nhà thành dạng thuê thay vì mua đứt)",
+        "add_garage": "Thêm Gara"
     },
     "menu": {
-        "add_keyholder": "Add Keyholder",
-        "people_inside": "People Inside",
-        "keyholders": "Keyholders",
-        "doorbell_ringers": "Doorbell Ringers",
-        "manage_keys": "Manage Keys",
-        "doorbell": "Doorbell",
-        "manage_property": "Manage Property",
-        "enter": "Enter",
-        "ring_doorbell": "Ring Doorbell",
-        "properties": "Properties",
-        "retrieve_properties": "Retrieve Owned Properties",
-        "show_owned_properties": "Only show properties you own",
-        "interior_preview": "Interior Preview",
-        "start_decorating": "Start Decorating",
-        "decorating_categories": "Categories"
+        "add_keyholder": "Thêm người giữ chìa",
+        "people_inside": "Người đang ở bên trong",
+        "keyholders": "Người giữ chìa khóa",
+        "doorbell_ringers": "Người đang bấm chuông",
+        "manage_keys": "Quản lý chìa khóa",
+        "doorbell": "Chuông cửa",
+        "manage_property": "Quản lý bất động sản",
+        "enter": "Vào nhà",
+        "ring_doorbell": "Bấm chuông cửa",
+        "properties": "Bất động sản",
+        "retrieve_properties": "Truy xuất bất động sản sở hữu",
+        "show_owned_properties": "Chỉ hiển thị bất động sản bạn sở hữu",
+        "interior_preview": "Xem trước nội thất",
+        "start_decorating": "Bắt đầu trang trí",
+        "decorating_categories": "Danh mục trang trí"
     },
     "instructButtons": {
-        "up": "Up",
-        "down": "Down",
-        "submit": "Submit"
+        "up": "Lên",
+        "down": "Xuống",
+        "submit": "Xác nhận"
     },
     "keyMappings": {
-        "gizmo_translation": "Sets mode to translation",
-        "gizmo_rotation": "Sets mode to rotation",
-        "gizmo_select": "Selects currently highlighted",
-        "gizmo_local": "Sets gizmo local to the entity"
+        "gizmo_translation": "Chế độ di chuyển (Tịnh tiến)",
+        "gizmo_rotation": "Chế độ xoay",
+        "gizmo_select": "Chọn đối tượng đang làm nổi bật",
+        "gizmo_local": "Đặt tọa độ Gizmo theo vật thể"
     },
     "drawtext": {
-        "stash": "[E] - Stash",
-        "exit": "[E] - Exit | [G] - Manage",
-        "clothing": "[E] - Clothing | [G] - Outfits",
-        "logout": "[E] - Logout",
-        "view_property": "[E] - View Property"
+        "stash": "[E] - Kho đồ",
+        "exit": "[E] - Thoát ra | [G] - Quản lý",
+        "clothing": "[E] - Quần áo | [G] - Trang phục",
+        "logout": "[E] - Đăng xuất",
+        "view_property": "[E] - Xem bất động sản"
     },
     "logs": {
-        "create_property": "Attempting to create a property.",
-        "property_created": "Property %s created successfully.",
-        "enter_property": "Player %s entered property %s.",
-        "exit_property": "Player %s exited property id %s.",
-        "apartment_selected": "Player %s selected apartment %s %s.",
-        "added_keyholder": "Added %s as a keyholder to the property %s.",
-        "removed_keyholder": "Removed %s as a keyholder to the property %s.",
-        "rent_property": "Player %s rented property %s.",
-        "buy_property": "Player %s bought property %s.",
-        "stop_renting": "Player %s stopped renting property %s.",
-        "add_decoration": "Player %s added decoration %s to property %s.",
-        "remove_decoration": "Player %s removed decoration %s from property %s."
+        "create_property": "Đang thực hiện tạo bất động sản.",
+        "property_created": "Bất động sản %s đã được tạo thành công.",
+        "enter_property": "Người chơi %s đã vào nhà %s.",
+        "exit_property": "Người chơi %s đã rời khỏi nhà ID %s.",
+        "apartment_selected": "Người chơi %s đã chọn căn hộ %s %s.",
+        "added_keyholder": "Đã thêm %s làm người giữ chìa khóa cho nhà %s.",
+        "removed_keyholder": "Đã xóa %s khỏi danh sách giữ chìa khóa nhà %s.",
+        "rent_property": "Người chơi %s đã thuê nhà %s.",
+        "buy_property": "Người chơi %s đã mua nhà %s.",
+        "stop_renting": "Người chơi %s đã ngừng thuê nhà %s.",
+        "add_decoration": "Người chơi %s đã thêm đồ trang trí %s vào nhà %s.",
+        "remove_decoration": "Người chơi %s đã xóa đồ trang trí %s khỏi nhà %s."
     }
 }

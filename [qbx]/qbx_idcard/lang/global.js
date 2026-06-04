@@ -1,8 +1,8 @@
 export const Global = {
     lang_header: 'Los Santos',
-    lang_lastname: 'Last Name',
-    lang_firstname: 'First Name',
-    lang_dob: 'Dob',
-    lang_sex: 'Sex',
-    lang_nat: 'Nationality',
+    lang_lastname: 'Họ',
+    lang_firstname: 'Tên',
+    lang_dob: 'Ngày sinh',
+    lang_sex: 'Giới tính',
+    lang_nat: 'Quốc tịch',
 };
