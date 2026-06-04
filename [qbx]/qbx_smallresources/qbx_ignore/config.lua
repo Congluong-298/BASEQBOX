@@ -34,6 +34,14 @@ return {
             'AIRTUG',
             'RIPLEY',
             'BLIMP',
+            'blimp2',
+            'blimp3',
+            'policeb',
+            'dump',
+            'rhino',
+            'phantom2',
+            'besra', --besra
+
         },
 
         scenarioGroups = {

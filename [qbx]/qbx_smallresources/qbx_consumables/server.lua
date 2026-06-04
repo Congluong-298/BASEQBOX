@@ -112,6 +112,14 @@ exports.qbx_core:CreateUseableItem('joint', function(source)
     TriggerClientEvent('consumables:client:UseJoint', source)
 end)
 
+exports.qbx_core:CreateUseableItem('joint1', function(source)
+    TriggerClientEvent('consumables:client:UseJoint', source)
+end)
+
+exports.qbx_core:CreateUseableItem('weed4g', function(source)
+    TriggerClientEvent('consumables:client:UseJoint', source)
+end)
+
 exports.qbx_core:CreateUseableItem('cokebaggy', function(source)
     TriggerClientEvent('consumables:client:Cokebaggy', source)
 end)
@@ -130,6 +138,10 @@ end)
 
 exports.qbx_core:CreateUseableItem('meth', function(source)
     TriggerClientEvent('consumables:client:meth', source)
+end)
+
+exports.qbx_core:CreateUseableItem('bao_thuoc_la', function(source)
+    TriggerClientEvent('consumables:client:bao_thuoc_la', source)
 end)
 
 exports.qbx_core:CreateUseableItem('lockpick', function(source)

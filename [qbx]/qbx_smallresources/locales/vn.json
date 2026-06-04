@@ -1,0 +1,42 @@
+{
+   "error": {
+      "canceled": "Hủy bỏ rồi nè..",
+      "cruise_control_disabled": "Chế độ điều khiển tự động đã tắt mất rồi",
+      "cruise_control_unavailable": "Chế độ điều khiển tự động không khả dụng đâu",
+      "deleted_recording": "Đã xóa bản ghi rồi nè!",
+      "later_aligator": "Hẹn gặp lại nha cá sấu!",
+      "stress_gain": "Cảm giác căng thẳng hơn rồi!",
+      "no_vehicle_nearby": "Không có xe nào gần đây để lật đâu.",
+      "is_handcuffed": "Bạn đang bị còng tay rồi.",
+      "is_fastened": "Bạn đã thắt dây an toàn rồi đó."
+   },
+   "success": {
+      "cruise_control_enabled": "Chế độ điều khiển tự động đã bật",
+      "started_recording": "Đã bắt đầu ghi hình rồi!",
+      "stopped_recording": "Đã dừng ghi hình!",
+      "saved_recording": "Đã lưu bản ghi rồi!",
+      "stress_relief": "Cảm thấy thư giãn hơn nhiều rồi!",
+      "flipped_car": "Lật xe thành công rồi nè!"
+   },
+   "progress": {
+      "eating": "Nhai nhai ngon lành..",
+      "drinking": "Ực ựt ựt..",
+      "drinking_liquor": "Đang uống rượu..",
+      "quick_sniff": "Ngửi nhanh một cái..",
+      "smoking_crack": "Đang hút crack..",
+      "popping_pills": "Đang uống thuốc..",
+      "healing": "Đang hồi phục..",
+      "smoking_meth": "Đang hút meth..",
+      "lighting_joint": "Đang châm điếu thuốc..",
+      "flipping_car": "Đang lật xe... "
+   },
+   "info": {
+      "minutes": "phút",
+      "seconds": "giây..",
+      "shuffleSeat": "Đổi ghế"
+   },
+   "actions": {
+      "push_vehicle": "Nhấn [~g~SHIFT~w~] và [~g~E~w~] để đẩy xe cho đến khi thả [~g~SHIFT~w~]",
+      "toggle_cruise_control": "Bật/Tắt chế độ điều khiển tự động"
+   }
+}

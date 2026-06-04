@@ -135,7 +135,7 @@ local function smokeWeed()
             TriggerServerEvent('hud:server:RelieveStress', math.random(15, 18))
             relieveCount += 1
             if relieveCount == 6 then
-                exports.scully_emotemenu:cancelEmote()
+                exports['rpemotes']:EmoteCancel()
                 if smokingWeed then
                     smokingWeed = false
                     relieveCount = 0
@@ -402,13 +402,84 @@ RegisterNetEvent('consumables:client:UseJoint', function()
             mouse = false,
             combat = true
         }
-    }) then -- if completed
+    }) then
         local used = lib.callback.await('consumables:server:usedItem', false, 'joint')
         if not used then return end
 
-        exports.scully_emotemenu:playEmoteByCommand('joint')
+        exports['rpemotes']:EmoteCommandStart('joint')
+
         TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
-        smokeWeed()
+        TriggerServerEvent('hud:server:RelieveStress', math.random(50, 55))
+
+        StartScreenEffect("DrugsMichaelAliensFight", 3.0, false)
+        StartScreenEffect("DrugsMichaelAliensFightIn", 3.0, false)
+
+        ShakeGameplayCam("DRUNK_SHAKE", 0.5)
+        SetTimecycleModifier("drug_flying_base")
+        SetTimecycleModifierStrength(0.7)
+        SetPedMotionBlur(cache.ped, true)
+        SetPedIsDrunk(cache.ped, true)
+
+        local clipset = "move_m@drunk@verydrunk"
+
+        RequestAnimSet(clipset)
+        local reqTimeout = GetGameTimer() + 2000
+        while not HasAnimSetLoaded(clipset) and GetGameTimer() < reqTimeout do
+            Wait(10)
+        end
+
+        if HasAnimSetLoaded(clipset) then
+            SetPedMovementClipset(cache.ped, clipset, true)
+        else
+            SetPedMovementClipset(cache.ped, "move_m@drunk@slightlydrunk", true)
+        end
+
+        local playerId = PlayerId()
+        SetRunSprintMultiplierForPlayer(playerId, 0.9)
+        SetSwimMultiplierForPlayer(playerId, 0.8)
+
+        Wait(60000)
+
+
+        StopScreenEffect("DrugsMichaelAliensFight")
+        StopScreenEffect("DrugsMichaelAliensFightIn")
+        SetTimecycleModifier("default")
+        SetPedMotionBlur(cache.ped, false)
+        SetPedIsDrunk(cache.ped, false)
+        ShakeGameplayCam("DRUNK_SHAKE", 0.0)
+        SetRunSprintMultiplierForPlayer(playerId, 1.0)
+        SetSwimMultiplierForPlayer(playerId, 1.0)
+        ClearPedTasksImmediately(cache.ped)
+        ResetPedMovementClipset(cache.ped, 0) 
+    else
+        exports.qbx_core:Notify(locale('error.canceled'), 'error')
+    end
+end)
+
+
+
+RegisterNetEvent('consumables:client:bao_thuoc_la', function()
+    local Check_Hot_Quet = exports.ox_inventory:Search('count', 'lighter')
+    if Check_Hot_Quet <= 0 then 
+        return exports.qbx_core:Notify('Bạn cần hột quẹt để hút thuốc', 'error')
+    end
+    if lib.progressBar({
+        duration = 1500,
+        label = locale('progress.lighting_joint'),
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            move = false,
+            car = false,
+            mouse = false,
+            combat = true
+        }
+    }) then -- if completed
+        exports['rpemotes']:EmoteCommandStart('joint')
+        TriggerServerEvent('BL_DevMode:cb:ActiveRemoveDurability', 'bao_thuoc_la', 100)
+        TriggerServerEvent('BL_DevMode:cb:ActiveRemoveDurability', 'lighter', 100)
+        TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
+        TriggerServerEvent('hud:server:RelieveStress', math.random(1, 3))
     else -- if canceled
         exports.qbx_core:Notify(locale('error.canceled'), 'error')
     end
