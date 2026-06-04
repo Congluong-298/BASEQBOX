@@ -14,12 +14,12 @@ end
 
 shared = {
     resource = GetCurrentResourceName(),
-    framework = GetConvar('inventory:framework', 'esx'),
-    playerslots = GetConvarInt('inventory:slots', 50),
-    playerweight = GetConvarInt('inventory:weight', 30000),
-    target = GetConvarBool('inventory:target', false),
+    framework = GetConvar('inventory:framework', 'qbx'),
+    playerslots = GetConvarInt('inventory:slots', 41),
+    playerweight = GetConvarInt('inventory:weight', 20000),
+    target = GetConvarInt('inventory:target', 0) == 1,
     police = json.decode(GetConvar('inventory:police', '["police", "sheriff"]')),
-    networkdumpsters = GetConvarBool('inventory:networkdumpsters', false)
+    networkdumpsters = GetConvarInt('inventory:networkdumpsters', 0) == 1
 }
 
 shared.dropslots = GetConvarInt('inventory:dropslots', shared.playerslots)
@@ -41,13 +41,12 @@ end
 
 if IsDuplicityVersion() then
     server = {
-        loghookrejection = GetConvarBool('inventory:loghookrejection', true),
-        bulkstashsave = GetConvarBool('inventory:bulkstashsave', true),
+        bulkstashsave = GetConvarInt('inventory:bulkstashsave', 1) == 1,
         loglevel = GetConvarInt('inventory:loglevel', 1),
-        randomprices = GetConvarBool('inventory:randomprices', false),
-        randomloot = GetConvarBool('inventory:randomloot', true),
+        randomprices = GetConvarInt('inventory:randomprices', 0) == 1,
+        randomloot = GetConvarInt('inventory:randomloot', 1) == 1,
         evidencegrade = GetConvarInt('inventory:evidencegrade', 2),
-        trimplate = GetConvarBool('inventory:trimplate', true),
+        trimplate = GetConvarInt('inventory:trimplate', 1) == 1,
         vehicleloot = json.decode(GetConvar('inventory:vehicleloot', [[
 			[
 				["sprunk", 1, 1],
@@ -67,12 +66,6 @@ if IsDuplicityVersion() then
 				["burger", 1, 1]
 			]
 		]])),
-        validhosts = json.decode(GetConvar('inventory:validhosts', [[
-			{
-                "r2.fivemanage.com": true,
-                "i.fmfile.com": true
-            }
-		]])),
     }
 
     local accounts = json.decode(GetConvar('inventory:accounts', '["money"]'))
@@ -84,25 +77,22 @@ if IsDuplicityVersion() then
 else
     PlayerData = {}
     client = {
-        player = lib.player:new(-1),
-        autoreload = GetConvarBool('inventory:autoreload', false),
-        screenblur = GetConvarBool('inventory:screenblur', true),
+        autoreload = GetConvarInt('inventory:autoreload', 0) == 1,
+        screenblur = GetConvarInt('inventory:screenblur', 1) == 1,
         keys = json.decode(GetConvar('inventory:keys', '')) or { 'F2', 'K', 'TAB' },
         enablekeys = json.decode(GetConvar('inventory:enablekeys', '[249]')),
-        aimedfiring = GetConvarBool('inventory:aimedfiring', false),
-        giveplayerlist = GetConvarBool('inventory:giveplayerlist', false),
-        weaponanims = GetConvarBool('inventory:weaponanims', true),
-        itemnotify = GetConvarBool('inventory:itemnotify', true),
-        weaponnotify = GetConvarBool('inventory:weaponnotify', true),
+        aimedfiring = GetConvarInt('inventory:aimedfiring', 0) == 1,
+        giveplayerlist = GetConvarInt('inventory:giveplayerlist', 0) == 1,
+        weaponanims = GetConvarInt('inventory:weaponanims', 1) == 1,
+        itemnotify = GetConvarInt('inventory:itemnotify', 1) == 1,
+        weaponnotify = GetConvarInt('inventory:weaponnotify', 1) == 1,
         imagepath = GetConvar('inventory:imagepath', 'nui://ox_inventory/web/images'),
-        dropprops = GetConvarBool('inventory:dropprops', false),
+        dropprops = GetConvarInt('inventory:dropprops', 0) == 1,
         dropmodel = joaat(GetConvar('inventory:dropmodel', 'prop_med_bag_01b')),
-        weaponmismatch = GetConvarBool('inventory:weaponmismatch', true),
+        weaponmismatch = GetConvarInt('inventory:weaponmismatch', 1) == 1,
         ignoreweapons = json.decode(GetConvar('inventory:ignoreweapons', '[]')),
-        suppresspickups = GetConvarBool('inventory:suppresspickups', true),
-        disableweapons = GetConvarBool('inventory:disableweapons', false),
-        disablesetupnotification = GetConvarBool('inventory:disablesetupnotification', false),
-        enablestealcommand = GetConvarBool('inventory:enablestealcommand', true)
+        suppresspickups = GetConvarInt('inventory:suppresspickups', 1) == 1,
+        disableweapons = GetConvarInt('inventory:disableweapons', 0) == 1,
     }
 
     local ignoreweapons = table.create(0, (client.ignoreweapons and #client.ignoreweapons or 0) + 3)
@@ -122,8 +112,8 @@ else
 
     local fallbackmarker = {
         type = 0,
-        colour = { 150, 150, 150 },
-        scale = { 0.5, 0.5, 0.5 }
+        colour = {150, 150, 150},
+        scale = {0.5, 0.5, 0.5}
     }
 
     client.shopmarker = json.decode(GetConvar('inventory:shopmarker', [[
@@ -171,7 +161,7 @@ function shared.info(...) lib.print.info(string.strjoin(' ', ...)) end
 ---@param expected string
 ---@param received string
 function TypeError(variable, expected, received)
-    error(("expected %s to have type '%s' (received %s)"):format(variable, expected, received))
+    error(("mong đợi %s có kiểu '%s' (đã nhận %s)"):format(variable, expected, received))
 end
 
 -- People like ignoring errors for some reason
@@ -223,7 +213,7 @@ end
 local success, msg = lib.checkDependency('oxmysql', '2.7.3')
 
 if success then
-    success, msg = lib.checkDependency('ox_lib', '3.36.4')
+    success, msg = lib.checkDependency('ox_lib', '3.27.0')
 end
 
 if not success then

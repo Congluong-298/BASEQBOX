@@ -14,14 +14,20 @@ return {
 			ammoname = 'WEAPON_SNOWBALL',
 		},
 
-		['WEAPON_TECPISTOL'] = {
+		['weapon_tecpistol'] = {
+			label = 'Tactical SMG',
+			weight = 1500,
+			durability = 0.075,
+			ammoname = 'ammo-9',
+		},
+		['weapon_tec_pistol'] = {
 			label = 'Tactical SMG',
 			weight = 1500,
 			durability = 0.075,
 			ammoname = 'ammo-9',
 		},
 
-		['WEAPON_ADVANCEDRIFLE'] = {
+		['weapon_advanced_rifle'] = {
 			label = 'Advanced Rifle',
 			weight = 3100,
 			durability = 0.03,
@@ -40,6 +46,12 @@ return {
 			weight = 4500,
 			durability = 0.03,
 			ammoname = 'ammo-rifle2',
+		},
+		['WEAPON_HUNTINGRIFLE'] = {
+			label = 'Súng Săn',
+			weight = 1000,
+			durability = 0.03,
+			ammoname = 'hunting_ammo',
 		},
 
 		['WEAPON_ASSAULTRIFLE_MK2'] = {
@@ -68,22 +80,27 @@ return {
 			weight = 149,
 			throwable = true,
 		},
-
+        ['WEAPON_ACIDPACKAGE'] = {
+    		label = 'Báo chí',
+    		weight = 0,
+			image = "WEAPON_ACIDPACKAGE.PNG",
+    		throwable = true,
+		},
 		['WEAPON_BAT'] = {
-			label = 'Bat',
+			label = 'Gậy Bóng Chày',
 			weight = 1134,
 			durability = 0.1,
 		},
 
 		['WEAPON_BATTLEAXE'] = {
-			label = 'Battle Axe',
-			weight = 6500,
+			label = 'Rìu Chặt Gỗ',
+			weight = 1000,
 			durability = 0.1,
 		},
 
 		['WEAPON_BOTTLE'] = {
 			label = 'Bottle',
-			weight = 350,
+			weight = 1000,
 			durability = 0.1,
 		},
 
@@ -131,7 +148,7 @@ return {
 		['WEAPON_CERAMICPISTOL'] = {
 			label = 'Ceramic Pistol',
 			weight = 800,
-			durability = 0.2,
+			durability = 0.1,
 			ammoname = 'ammo-9'
 		},
 
@@ -251,13 +268,13 @@ return {
 		},
 
 		['WEAPON_FLASHLIGHT'] = {
-			label = 'Flashlight',
-			weight = 125,
+			label = 'Đèn pin',
+			weight = 250,
 			durability = 0.1,
 		},
 
 		['WEAPON_GOLFCLUB'] = {
-			label = 'Golf Club',
+			label = 'Gậy golf',
 			weight = 330,
 			durability = 0.1,
 		},
@@ -370,35 +387,35 @@ return {
 		},
 
 		['WEAPON_MACHINEPISTOL'] = {
-			label = 'Machine Pistol',
+			label = 'Súng máy',
 			weight = 1400,
 			durability = 0.05,
 			ammoname = 'ammo-9'
 		},
 
 		['WEAPON_MARKSMANPISTOL'] = {
-			label = 'Marksman Pistol',
+			label = 'Súng ngắm',
 			weight = 1588,
 			durability = 0.5,
 			ammoname = 'ammo-22'
 		},
 
 		['WEAPON_MARKSMANRIFLE'] = {
-			label = 'Marksman Rifle',
+			label = 'Súng ngắm',
 			weight = 7500,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MARKSMANRIFLE_MK2'] = {
-			label = 'Marksman Rifle MK2',
+			label = 'Súng ngắm MK2',
 			weight = 4000,
 			durability = 0.4,
 			ammoname = 'ammo-sniper'
 		},
 
 		['WEAPON_MG'] = {
-			label = 'Machine Gun',
+			label = 'Súng máy',
 			weight = 9000,
 			durability = 0.02,
 			ammoname = 'ammo-rifle2'
@@ -419,7 +436,7 @@ return {
 		},
 
 		['WEAPON_MILITARYRIFLE'] = {
-			label = 'Military Rifle',
+			label = 'Súng trường quân sự',
 			weight = 3600,
 			durability = 0.03,
 			ammoname = 'ammo-rifle'
@@ -446,7 +463,7 @@ return {
 		},
 
 		['WEAPON_NAVYREVOLVER'] = {
-			label = 'Navy Revolver',
+			label = 'Súng lục hải quân',
 			weight = 4000,
 			durability = 0.2,
 			ammoname = 'ammo-44'
@@ -459,12 +476,12 @@ return {
 		},
 
 		['WEAPON_PETROLCAN'] = {
-			label = 'Jerry Can',
-			weight = 4000,
+			label = 'Can Xăng',
+			weight = 10,
 		},
 
 		['WEAPON_GADGETPISTOL'] = {
-			label = 'Perico Pistol',
+			label = 'Pistol Đặc Biệt',
 			weight = 1750,
 			durability = 0.1,
 			ammoname = 'ammo-9'
@@ -477,9 +494,9 @@ return {
 		},
 
 		['WEAPON_PISTOL'] = {
-			label = 'Pistol',
+			label = 'Súng lục',
 			weight = 1130,
-			durability = 0.1,
+			durability = 0.23,
 			ammoname = 'ammo-9',
 		},
 
@@ -604,8 +621,14 @@ return {
 			throwable = true,
 		},
 
-		['WEAPON_SNIPERRIFLE'] = {
+		['weapon_sniperrifle'] = {
 			label = 'Sniper Rifle',
+			weight = 5000,
+			durability = 0.5,
+			ammoname = 'ammo-sniper'
+		},
+		['WEAPON_SNIPERRIFLE2'] = {
+			label = 'Súng săn',
 			weight = 5000,
 			durability = 0.5,
 			ammoname = 'ammo-sniper'
@@ -672,7 +695,7 @@ return {
 
 		['WEAPON_SWITCHBLADE'] = {
 			label = 'Switchblade',
-			weight = 300,
+			weight = 830,
 			durability = 0.1,
 			anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
 		},
@@ -1417,7 +1440,7 @@ return {
 		},
 
 		['at_skin_fatalincursion'] = {
-			label = 'Fatal Incursion Weapon Kit',
+			label = 'Bộ vũ khí đột nhập chí mạng',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1429,7 +1452,7 @@ return {
 		},
 
 		['at_skin_luchalibre'] = {
-			label = 'Lucha Libre Weapon Kit',
+			label = 'Bộ vũ khí Lucha Libre',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1441,7 +1464,7 @@ return {
 		},
 
 		['at_skin_trippy'] = {
-			label = 'Trippy Weapon Kit',
+			label = 'Bộ vũ khí kỳ lạ',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1453,7 +1476,7 @@ return {
 		},
 
 		['at_skin_tiedye'] = {
-			label = 'Tie-Dye Weapon Kit',
+			label = 'Bộ vũ khí nhuộm tie-dye',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1465,7 +1488,7 @@ return {
 		},
 
 		['at_skin_wall'] = {
-			label = 'Wall Weapon Kit',
+			label = 'Bộ vũ khí tường',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1477,7 +1500,7 @@ return {
 		},
 
 		['at_skin_vip'] = {
-			label = 'VIP Weapon Kit',
+			label = 'Bộ vũ khí VIP',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1490,7 +1513,7 @@ return {
 		},
 
 		['at_skin_bodyguard'] = {
-			label = 'Bodyguard Weapon Kit',
+			label = 'Bộ vũ khí vệ sĩ',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1503,7 +1526,7 @@ return {
 		},
 
 		['at_skin_festive'] = {
-			label = 'Festive Weapon Kit',
+			label = 'Bộ vũ khí lễ hội',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1515,7 +1538,7 @@ return {
 		},
 
 		['at_skin_security'] = {
-			label = 'Security Weapon Kit',
+			label = 'Bộ vũ khí an ninh',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1528,7 +1551,7 @@ return {
 		},
 
 		['at_skin_camo'] = {
-			label = 'Camo Weapon Kit',
+			label = 'Bộ vũ khí ngụy trang',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1551,7 +1574,7 @@ return {
 		},
 
 		['at_skin_brushstroke'] = {
-			label = 'Brushstroke Weapon Kit',
+			label = 'Bộ vũ khí Brushstroke',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1574,7 +1597,7 @@ return {
 		},
 
 		['at_skin_woodland'] = {
-			label = 'Woodland Weapon Kit',
+			label = 'Bộ vũ khí Woodland',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1597,7 +1620,7 @@ return {
 		},
 
 		['at_skin_skull'] = {
-			label = 'Skull Weapon Kit',
+			label = 'Bộ vũ khí đầu lâu',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1689,7 +1712,7 @@ return {
 		},
 
 		['at_skin_zebra'] = {
-			label = 'Zebra Weapon Kit',
+			label = 'Bộ vũ khí Zebra',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1712,7 +1735,7 @@ return {
 		},
 
 		['at_skin_geometric'] = {
-			label = 'Geometric Weapon Kit',
+			label = 'Bộ vũ khí hình học',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1735,7 +1758,7 @@ return {
 		},
 
 		['at_skin_boom'] = {
-			label = 'Boom Weapon Kit',
+			label = 'Bộ vũ khí Boom',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1758,7 +1781,7 @@ return {
 		},
 
 		['at_skin_patriotic'] = {
-			label = 'Patriotic Weapon Kit',
+			label = 'Bộ vũ khí yêu nước',
 			type = 'skin',
 			weight = 50,
 			client = {
@@ -1818,12 +1841,12 @@ return {
 		},
 
 		['ammo-flare'] = {
-			label = 'Flare round',
+			label = 'Vòng loe',
 			weight = 38,
 		},
 
 		['ammo-grenade'] = {
-			label = '40mm Explosive',
+			label = '40mm Chất nổ',
 			weight = 400,
 		},
 
@@ -1833,7 +1856,7 @@ return {
 		},
 
 		['ammo-laser'] = {
-			label = 'Laser charge',
+			label = 'Sạc laser',
 			weight = 1,
 		},
 
@@ -1843,7 +1866,7 @@ return {
 		},
 
 		['ammo-railgun'] = {
-			label = 'Railgun charge',
+			label = 'Điện từ trường',
 			weight = 150,
 		},
 
@@ -1858,7 +1881,7 @@ return {
 		},
 
 		['ammo-rocket'] = {
-			label = 'Rocket',
+			label = 'Tên lửa',
 			weight = 500,
 		},
 
@@ -1868,12 +1891,12 @@ return {
 		},
 
 		['ammo-sniper'] = {
-			label = '7.62x51',
+			label = 'Đạn 7.62',
 			weight = 9,
 		},
 
 		['ammo-emp'] = {
-			label = 'EMP round',
+			label = 'Vòng EMP',
 			weight = 400,
 		},
 	}

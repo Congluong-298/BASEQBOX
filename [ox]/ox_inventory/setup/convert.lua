@@ -130,7 +130,7 @@ local function ConvertESX()
 	end
 
 	MySQL.prepare.await('UPDATE users SET inventory = ? WHERE identifier = ?', parameters)
-	Print('Successfully converted user inventories')
+	Print('Đã chuyển đổi thành công hàng tồn kho của người dùng')
 	started = false
 end
 
@@ -148,7 +148,7 @@ local function Convert_Old_ESX_Property()
 	local count = 0
 	local parameters = {}
 
-	Print(('Converting %s user property inventories to new data format'):format(total))
+	Print(('Đang chuyển đổi %s hàng tồn kho bất động sản của người dùng sang định dạng dữ liệu mới'):format(total))
 
 	for i = 1, #inventories do
 		count += 1

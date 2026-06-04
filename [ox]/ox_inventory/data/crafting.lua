@@ -1,9 +1,9 @@
 return {
 	{
-        name = 'debug_crafting',
+        name = 'advancedrepairkit',
 		items = {
 			{
-				name = 'lockpick',
+				name = 'advancedrepairkit',
 				ingredients = {
 					scrapmetal = 5,
 					WEAPON_HAMMER = 0.05
@@ -13,8 +13,8 @@ return {
 			},
 		},
 		points = {
-			vec3(-1147.083008, -2002.662109, 13.180260),
-			vec3(-345.374969, -130.687088, 39.009613)
+--			vec3(-1147.083008, -2002.662109, 13.180260),
+--			vec3(-345.374969, -130.687088, 39.009613)
 		},
 		zones = {
 			{
@@ -30,6 +30,6 @@ return {
 				rotation = 70.0,
 			},
 		},
-		blip = { id = 566, colour = 31, scale = 0.8 },
+--		blip = { id = 566, colour = 31, scale = 0.8 },
 	},
 }
