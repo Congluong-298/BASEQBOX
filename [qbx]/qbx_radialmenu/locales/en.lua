@@ -1,56 +1,56 @@
 local Translations = {
     error = {
-        no_people_nearby = "No Players Nearby",
-        no_vehicle_found = "No Vehicle Found",
-        extra_deactivated = "Extra %{extra} Has Been Deactivated",
-        extra_not_present = "Extra %{extra} Is Not Present on This Vehicle",
-        not_driver = "You Are Not the Driver of the Vehicle",
-        vehicle_driving_fast = "This Vehicle Is Moving Too Fast",
-        race_harness_on = "You Have a Race Harness On; You Can't Switch",
-        obj_not_found = "Could Not Create the Requested Object",
-        not_near_ambulance = "You Are Not Near an Ambulance",
-        far_away = "You Are Too Far Away",
-        not_kidnapped = "You Did Not Kidnap This Person",
-        trunk_closed = "The Trunk Is Closed",
-        cant_enter_trunk = "You Can't Get In This Trunk",
-        already_in_trunk = "You Are Already In The Trunk",
-        cancel_task = "Task Cancelled",
-        someone_in_trunk = "Someone Is Already In The Trunk",
-        no_vehicle_nearby = "No Vehicle Nearby For Flipping."
+        no_people_nearby = "Không có ai ở gần đây",
+        no_vehicle_found = "Không tìm thấy phương tiện",
+        extra_deactivated = "Phụ kiện (Extra) %{extra} đã được tắt",
+        extra_not_present = "Phụ kiện %{extra} không tồn tại trên phương tiện này",
+        not_driver = "Bạn không phải là người lái xe",
+        vehicle_driving_fast = "Phương tiện đang di chuyển quá nhanh",
+        race_harness_on = "Bạn đang đeo dây đai đua xe; không thể đổi chỗ",
+        obj_not_found = "Không thể tạo đối tượng được yêu cầu",
+        not_near_ambulance = "Bạn không ở gần xe cứu thương",
+        far_away = "Bạn đang ở quá xa",
+        not_kidnapped = "Bạn không bắt cóc người này",
+        trunk_closed = "Cốp xe đang đóng",
+        cant_enter_trunk = "Bạn không thể vào cốp xe này",
+        already_in_trunk = "Bạn đã ở trong cốp xe rồi",
+        cancel_task = "Đã hủy bỏ hành động",
+        someone_in_trunk = "Đã có người trong cốp xe",
+        no_vehicle_nearby = "Không có phương tiện nào gần đây để lật."
     },
     progress = {
-        flipping_car = "Flipping Vehicle..."
+        flipping_car = "Đang lật xe..."
     },
     success = {
-        extra_activated = "Extra %{extra} Has Been Activated",
-        entered_trunk = "You're In The Trunk",
-        flipped_car = "Vehicle Flipped Successfully!"
+        extra_activated = "Phụ kiện (Extra) %{extra} đã được bật",
+        entered_trunk = "Bạn đã vào trong cốp xe",
+        flipped_car = "Đã lật xe thành công!"
     },
     info = {
-        no_variants = "There Don't Seem to Be Any Variants for This",
-        wrong_ped = "This Ped Model Does Not Allow for This Option",
-        nothing_to_remove = "You Don't Appear to Have Anything to Remove",
-        already_wearing = "You Are Already Wearing That",
+        no_variants = "Dường như không có biến thể nào cho mục này",
+        wrong_ped = "Mẫu nhân vật này không cho phép tùy chọn này",
+        nothing_to_remove = "Bạn không có gì để tháo ra",
+        already_wearing = "Bạn đang mặc món đồ đó rồi",
     },
     general = {
-        command_description = "Open Radial Menu",
-        get_out_trunk_button = "[E] Get Out Of The Trunk",
-        close_trunk_button = "[G] Close The Trunk",
-        open_trunk_button = "[G] Open The Trunk",
-        getintrunk_command_desc = "Get In Trunk",
-        putintrunk_command_desc = "Put Player In Trunk",
-        gang_radial = "Gang",
-        job_radial = "Job"
+        command_description = "Mở Menu vòng",
+        get_out_trunk_button = "[E] Thoát khỏi cốp xe",
+        close_trunk_button = "[G] Đóng cốp xe",
+        open_trunk_button = "[G] Mở cốp xe",
+        getintrunk_command_desc = "Vào cốp xe",
+        putintrunk_command_desc = "Đưa người chơi vào cốp xe",
+        gang_radial = "Băng đảng",
+        job_radial = "Công việc"
     },
     options = {
-        flip = 'Flip Vehicle',
-        vehicle = 'Vehicle',
-        emergency_button = "Emergency Button",
-        driver_seat = "Drivers Seat",
-        passenger_seat = "Passenger Seat",
-        other_seats = "Other Seat",
-        rear_left_seat = "Rear Left Seat",
-        rear_right_seat = "Rear Right Seat"
+        flip = 'Lật xe',
+        vehicle = 'Phương tiện',
+        emergency_button = "Nút khẩn cấp",
+        driver_seat = "Ghế lái",
+        passenger_seat = "Ghế phụ",
+        other_seats = "Ghế khác",
+        rear_left_seat = "Ghế sau trái",
+        rear_right_seat = "Ghế sau phải"
     },
 }
 
