@@ -1,40 +1,40 @@
 {
     "error": {
-        "finish_work": "Finish all of your work first",
-        "vehicle_not_correct": "This is not the right Vehicle",
-        "failed": "You have failed",
-        "not_towing_vehicle": "You must be In your Towing Vehicle",
-        "too_far_away": "You are too far away",
-        "no_work_done": "You have not done any work yet",
-        "no_deposit": "$%s Deposit required"
+        "finish_work": "Hãy hoàn thành tất cả công việc trước đã",
+        "vehicle_not_correct": "Đây không phải là phương tiện chính xác",
+        "failed": "Bạn đã thất bại",
+        "not_towing_vehicle": "Bạn phải ngồi trong xe cứu hộ của mình",
+        "too_far_away": "Bạn đang ở quá xa",
+        "no_work_done": "Bạn chưa hoàn thành bất kỳ công việc nào",
+        "no_deposit": "Yêu cầu tiền đặt cọc $%s"
     },
     "success": {
-        "paid_with_cash": "$%s Deposit Paid With Cash",
-        "paid_with_bank": "$%s Deposit Paid From Bank",
-        "refund_to_cash": "$%s Deposit Paid With Cash",
-        "you_earned": "You Earned $%s"
+        "paid_with_cash": "Đã thanh toán $%s tiền cọc bằng tiền mặt",
+        "paid_with_bank": "Đã thanh toán $%s tiền cọc từ ngân hàng",
+        "refund_to_cash": "Đã hoàn trả $%s tiền cọc bằng tiền mặt",
+        "you_earned": "Bạn đã kiếm được $%s"
     },
     "menu": {
-        "header": "Available Trucks",
-        "close_menu": "⬅ Close Menu"
+        "header": "Danh sách xe tải có sẵn",
+        "close_menu": "⬅ Đóng Menu"
     },
     "mission": {
-        "delivered_vehicle": "You Have Delivered A Vehicle",
-        "get_new_vehicle": "A New Vehicle Can Be Picked Up",
-        "towing_vehicle": "Hoisting the Vehicle...",
-        "goto_depot": "Take The Vehicle To Hayes Depot",
-        "vehicle_towed": "Vehicle Towed",
-        "untowing_vehicle": "Remove The Vehicle",
-        "vehicle_takenoff": "Vehicle Taken Off"
+        "delivered_vehicle": "Bạn đã giao một phương tiện thành công",
+        "get_new_vehicle": "Có thể đến lấy một phương tiện mới",
+        "towing_vehicle": "Đang cẩu phương tiện lên...",
+        "goto_depot": "Hãy đưa phương tiện đến bãi tập kết Hayes",
+        "vehicle_towed": "Phương tiện đã được kéo lên",
+        "untowing_vehicle": "Đang hạ phương tiện xuống",
+        "vehicle_takenoff": "Phương tiện đã được hạ xuống"
     },
     "info": {
-        "tow": "Place A Car On The Back Of Your Flatbed",
-        "toggle_npc": "Toggle Npc Job",
-        "skick": "Attempted exploit abuse"
+        "tow": "Đặt một chiếc xe lên thùng xe cứu hộ của bạn",
+        "toggle_npc": "Bật/Tắt công việc NPC",
+        "skick": "Phát hiện hành vi cố ý lạm dụng lỗi (exploit)"
     },
     "label": {
-        "payslip": "Payslip",
-        "vehicle": "Vehicle",
-        "npcz": "NPCZone"
+        "payslip": "Phiếu lương",
+        "vehicle": "Phương tiện",
+        "npcz": "Khu vực NPC"
     }
 }

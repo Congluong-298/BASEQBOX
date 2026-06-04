@@ -1,14 +1,14 @@
 {
     "progress" : {
-        "attachHarness": "Attaching Race Harness",
-        "removeHarness": "Removing Race Harness"
+        "attachHarness": "Đang gắn dây đai đua xe",
+        "removeHarness": "Đang tháo dây đai đua xe"
     },
     "notify": {
-        "notInCar": "You're not in a car"
+        "notInCar": "Bạn không ngồi trong xe"
     },
     "error": {
-        "seatbelton": "Take your seatbelt off first",
-        "harnesson": "Take your harness off first"
+        "seatbelton": "Hãy tháo dây an toàn ra trước",
+        "harnesson": "Hãy tháo dây đai đua xe ra trước"
     },
-    "toggleCommand": "Toggle Seatbelt"
+    "toggleCommand": "Bật/Tắt dây an toàn"
 }
