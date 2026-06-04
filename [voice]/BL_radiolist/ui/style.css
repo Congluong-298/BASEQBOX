@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root {
+    --main-font-color: #f1e8e8;
+    --main-font-style: 'Kanit', sans-serif;
+    --main-bg-color: #3c3c3c;
+    --main-color-rgb1: 208, 63, 68;
+    --main-color-rgb2: 238, 103, 108;
+    --main-color-rgb3: 226, 78, 83;
+    --main-color-hex1: #d03f44;
+    --main-color-hex2: #ee676c;
+    --main-color-hex3: #e24e53;
+    --main-color-hex4: #f5aaad;
+    --cl-gradien-deg: 0deg;
+    --cl: rgb(var(--main-color-rgb1));
+    --cl-gradien-bg: rgb(var(--main-color-rgb3));
+    --cl-gradien: linear-gradient(var(--cl-gradien-deg), rgba(var(--main-color-rgb3), 1) 0%, rgba(var(--main-color-rgb1), 1) 50%, rgba(var(--main-color-rgb2), 1) 100%);
+}
+
+body {
+    overflow: auto;
+    font-family: 'Kanit', sans-serif;
+}
+
+body>* {
+    flex-shrink: 0;
+    user-select: none;
+}
+
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes offsettozero {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.bg {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(237, 205, 92, 0);
+    top: 0vh;
+    left: 155vh;
+}
+
+.voice-advanced {
+    position: absolute;
+    top: 25%;
+    left: 0.5%;
+}
+
+.content-box {
+    position: relative;
+    border-radius: 5px;
+    width: auto;
+    height: auto;
+}
+
+.main-content {
+    display: flex;
+    padding: 0.9vh;
+    background: #cb9d84;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.main-content-2 {
+    padding: 0.2vh;
+    background: #cb9d84;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn {
+    width: 6vh;
+    height: 2.2vh;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    background: #411305;
+    border-radius: 1.5vh;
+    font-size: 1.2vh;
+}
+
+.content-Mhz {
+    position: fixed;
+    font-size: 1vh;
+    font-weight: 500;
+    color: var(--main-font-color);
+    background-color: var(--main-bg-color);
+    box-shadow: inset 3px 5px 3px #1f1f1f, 0px 1px 2px #4c4c4c;
+    padding: 0.11rem 0.33rem;
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #4c4c4c;
+    cursor: pointer;
+}
+
+.content-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1.5vh;
+    font-weight: 400;
+    padding-top: 1px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.main-playerlist {
+    display: grid;
+    grid-template-columns: 19vh;
+    gap: 3px;
+    padding: 2px 5px;
+    background: #000000;
+    /* background: linear-gradient(0deg, rgba(40, 40, 40, 0.409) 0%, rgba(44, 44, 44, 0.5382353625043768) 18%, rgba(31, 31, 31, 1) 100%); */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+}
+
+.more-player {
+    grid-template-columns: 1fr 1fr;
+}
+
+.playerlist.head {
+    order: -1;
+    color: #83a0ac;
+}
+
+.playerlist {
+    display: flex;
+    white-space: nowrap;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 1.1vh;
+    font-weight: 100;
+    color: #fff;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    align-items: center;
+    border: 1.5px solid #1f1f1f;
+    box-shadow: inset 2px 6px 9px #1f1f1f25;
+    transition: all 0.6s;
+}
+
+.radio-walkie {
+    background-image: url('microphone.png');
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.7s;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.playerlist.active {
+    order: -1;
+    background-color: #cb9d84;
+    border: 1.5px solid #4c4c4c;
+    box-shadow: inset 2px 6px 9px #cb9d84, 0px 0px 5px 1px #cb9d84;
+    color: #fff;
+    text-shadow: 0px 0px 7px #000000;
+}
+
+.playerlist.active .radio-walkie {
+    /* rotate: -15deg; */
+    scale: 1.3;
+    margin-left: -3px;
+}
+
+.d-text {
+    color: rgb(27, 27, 27);
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    font-size: 1.3vh;
+}
+
+@media only screen and (max-height: 700px) {
+
+    /* For desktop: */
+    .content-Mhz {
+        display: none;
+    }
+
+    .content-box {
+        width: auto;
+    }
+
+    .main-playerlist {
+        grid-template-columns: auto;
+    }
+}

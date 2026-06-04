@@ -1,0 +1,376 @@
+-- local PlayerClothe = {}
+
+-- local Arms = data("arms")
+
+-- RegisterNetEvent('ox_inventory:SendNUIMessage', function(data)
+--   SendNUIMessage(data)
+-- end)
+
+-- function PlayerClothe.GetItemComponentData(item)
+--   local ret = {
+--     type = 'unk',
+--     componentId = 0,
+--     drawableId = item.metadata.drawableId or 0,
+--     textureId = item.metadata.textureId or 0,
+--   }
+--   if item.metadata.slot == 'mask' then
+--     ret.type = 'component'
+--     ret.componentId = 1
+--   elseif item.metadata.slot == 'hair' then
+--     ret.type = 'component'
+--     ret.componentId = 2
+--   elseif item.metadata.slot == 'arms' then
+--     ret.type = 'component'
+--     ret.componentId = 3
+--   elseif item.metadata.slot == 'leg' then
+--     ret.type = 'component'
+--     ret.componentId = 4
+--   elseif item.metadata.slot == 'bag' then
+--     ret.type = 'component'
+--     ret.componentId = 5
+--   elseif item.metadata.slot == 'shoes' then
+--     ret.type = 'component'
+--     ret.componentId = 6
+--   elseif item.metadata.slot == 'accessory' then
+--     ret.type = 'component'
+--     ret.componentId = 7
+--   elseif item.metadata.slot == 'undershirt' then
+--     ret.type = 'component'
+--     ret.componentId = 8
+--   elseif item.metadata.slot == 'kevlar' then
+--     ret.type = 'component'
+--     ret.componentId = 9
+--   elseif item.metadata.slot == 'top' then
+--     ret.type = 'component'
+--     ret.componentId = 11
+--   elseif item.metadata.slot == 'hat' then -- props
+--     ret.type = 'prop'
+--     ret.componentId = 0
+--   elseif item.metadata.slot == 'glass' then
+--     ret.type = 'prop'
+--     ret.componentId = 1
+--   elseif item.metadata.slot == 'ear' then
+--     ret.type = 'prop'
+--     ret.componentId = 2
+--   elseif item.metadata.slot == 'watch' then
+--     ret.type = 'prop'
+--     ret.componentId = 6
+--   elseif item.metadata.slot == 'bracelet' then
+--     ret.type = 'prop'
+--     ret.componentId = 7
+--   end
+--   return ret
+-- end
+
+-- function PlayerClothe.LoadDefaultComponent()
+--   local ped = PlayerPedId()
+--   local model = GetEntityModel(ped)
+--   local maleModel = `mp_m_freemode_01`
+--   if model == maleModel then
+--     SetPedComponentVariation(ped, 1, 0, 0, 2)
+--     SetPedComponentVariation(ped, 3, 15, 0, 2)
+--     SetPedComponentVariation(ped, 4, 18, 0, 2)
+--     SetPedComponentVariation(ped, 5, 0, 0, 2)
+--     SetPedComponentVariation(ped, 6, 16, 0, 2)
+--     SetPedComponentVariation(ped, 7, 0, 0, 2)
+--     SetPedComponentVariation(ped, 8, 15, 0, 2)
+--     SetPedComponentVariation(ped, 9, 0, 0, 2)
+--     SetPedComponentVariation(ped, 10, 0, 0, 2)
+--     SetPedComponentVariation(ped, 11, 15, 0, 2)
+--     ClearPedProp(ped, 0)
+--     ClearPedProp(ped, 1)
+--     ClearPedProp(ped, 2)
+--     ClearPedProp(ped, 6)
+--     ClearPedProp(ped, 7)
+--   else
+--     SetPedComponentVariation(ped, 1, 0, 0, 2)
+--     SetPedComponentVariation(ped, 3, 15, 0, 2)
+--     SetPedComponentVariation(ped, 4, 12, 0, 2)
+--     SetPedComponentVariation(ped, 5, 0, 0, 2)
+--     SetPedComponentVariation(ped, 6, 16, 0, 2)
+--     SetPedComponentVariation(ped, 7, 0, 0, 2)
+--     SetPedComponentVariation(ped, 8, 15, 0, 2)
+--     SetPedComponentVariation(ped, 9, 0, 0, 2)
+--     SetPedComponentVariation(ped, 10, 0, 0, 2)
+--     SetPedComponentVariation(ped, 11, 15, 0, 2)
+--     ClearPedProp(ped, 0)
+--     ClearPedProp(ped, 1)
+--     ClearPedProp(ped, 2)
+--     ClearPedProp(ped, 6)
+--     ClearPedProp(ped, 7)
+--   end
+-- end
+
+-- function PlayerClothe.ParseInventory(data)
+--   local ped = PlayerPedId()
+--   PlayerClothe.LoadDefaultComponent()
+
+--   for k, v in pairs(data) do
+--     local componentData = PlayerClothe.GetItemComponentData(v)
+--     if componentData.type == 'component' then
+--       SetPedComponentVariation(ped, componentData.componentId, componentData.drawableId, componentData.textureId, 2)
+--       if componentData.componentId == 11 then
+--         if Arms[componentData.drawableId] then
+--           SetPedComponentVariation(ped, 3, Arms[componentData.drawableId], 0, 2)
+--         end
+--       end
+--     elseif componentData.type == 'prop' then
+--       SetPedPropIndex(ped, componentData.componentId, componentData.drawableId, componentData.textureId, 2)
+--     end
+--   end
+--   lib.callback("illenium-appearance:server:getAppearance", false, function(appearance)
+--     exports['illenium-appearance']:setPedAppearance(PlayerPedId(), appearance)
+--   end)
+-- end
+
+-- RegisterNetEvent("ox_inventory_clothing:refreshClothing", function(data)
+--   SendNUIMessage({
+--     action = 'setClothing',
+--     data = data,
+--   })
+-- end)
+
+-- RegisterNetEvent("ox_inventory_clothing:client:refreshUpgrade", function(data)
+--   SendNUIMessage({
+--     action = "clothing_upgrade:setTarget",
+--     data = data.target
+--   })
+--   SendNUIMessage({
+--     action = "clothing_upgrade:setIngredients",
+--     data = data.ingredients
+--   })
+-- end)
+
+-- RegisterNetEvent("ox_inventory_clothing:client:refreshWashing", function(data)
+--   SendNUIMessage({
+--     action = "washing_machine:setSlots",
+--     data = data.slots
+--   })
+--   SendNUIMessage({
+--     action = "washing_machine:setPrice",
+--     data = data.price
+--   })
+--   SendNUIMessage({
+--     action = "washing_machine:setTime",
+--     data = data.time
+--   })
+--   SendNUIMessage({
+--     action = "washing_machine:setEndAt",
+--     data = data.endAt
+--   })
+-- end)
+
+-- function GetSlot(slotId)
+--   local items = exports.ox_inventory:GetPlayerItems()
+--   for k, v in pairs(items) do
+--     if v.slot == slotId then
+--       return v
+--     end
+--   end
+--   return nil
+-- end
+
+-- RegisterNUICallback("useCloth", function(body, resultCallback)
+--   resultCallback("ok")
+--   local p = promise.new()
+--   local slotData = GetSlot(body.fromSlot)
+--   local playerState = exports.gtago_middleman:GetPlayerData()
+--   if not slotData then
+--     return
+--   end
+--   if slotData.metadata and slotData.metadata.job then
+--     if not playerState or playerState.job.name ~= slotData.metadata.job or not playerState.job.onDuty then
+--       return exports.gtago_hud:Notify("Bạn không có quyền sử dụng trang phục này!", "error")
+--     end
+--   end
+--   if body.toType == "clothing" then
+--     if body.toSlot == 9 then
+--       local progress = lib.progressBar({
+--         duration = 8000,
+--         label = 'Đang mặc giáp',
+--         image = 'giap1',
+--         useWhileDead = false,
+--         canCancel = true,
+--         disable = {
+--         },
+--         anim = {
+--           dict = 'clothingshirt',
+--           clip = 'try_shirt_positive_d'
+--         }
+--       })
+--       if progress then
+--         p:resolve(true)
+--       else
+--         p:resolve(false)
+--       end
+--     else
+--       p:resolve(true)
+--     end
+--   end
+--   local ok = Citizen.Await(p)
+--   if not ok then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = "Hành động đã bị hủy bỏ"
+--       }
+--     })
+--     return
+--   end
+--   local gender = exports.ox_inventory_clothing:ImplCall("Main", "GetGender")
+--   local response, errMsg = lib.callback.await('ox_inventory:server:clothing:onSwaps', false, body, gender)
+--   print("response", json.encode(response))
+--   print("errMsg", errMsg)
+--   --[[ if errMsg then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = errMsg
+--       }
+--     })
+--   end ]]
+--   exports.ox_inventory_clothing:ImplCall("Main", "SetData", response)
+-- end)
+
+-- RegisterNUICallback("undress", function(body, resultCallback)
+--   resultCallback("ok")
+--   local response, errMsg = lib.callback.await('ox_inventory:server:clothing:onSwaps', false, body, gender)
+--   local err = exports.ox_inventory_clothing:ImplCall("Main", "SetData", response)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("clothing_upgrade:onUpgradeClick", function(body, resultCallback)
+--   local success, err = exports.ox_inventory_clothing:ImplCall("Upgrade", "Upgrade")
+--   resultCallback({
+--     success = success,
+--     err = err
+--   })
+-- end)
+
+-- RegisterNUICallback("clothing_upgrade:onTargetDrop", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Upgrade", "SetTarget", body.item)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("clothing_upgrade:onTargetClick", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Upgrade", "RemoveTarget")
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("clothing_upgrade:onIngredientDrop", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Upgrade", "SetIngredient", body.index + 1, body.item)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("clothing_upgrade:onIngredientClick", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Upgrade", "RemoveIngredient", body.index + 1)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- -- Washing machine
+-- RegisterNUICallback("washing_machine:onSlotDrop", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Washing", "SetSlot", body.index + 1, body.item)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("washing_machine:onSlotClick", function(body, resultCallback)
+--   resultCallback("ok")
+--   local err = exports.ox_inventory_clothing:ImplCall("Washing", "RemoveSlot", body.index + 1)
+--   if err then
+--     SendNUIMessage({
+--       action = "notification",
+--       data = {
+--         type = "error",
+--         msg = err
+--       }
+--     })
+--   end
+-- end)
+
+-- RegisterNUICallback("washing_machine:onWashingClick", function(body, resultCallback)
+--   local success, err = exports.ox_inventory_clothing:ImplCall("Washing", "Washing")
+--   resultCallback({
+--     success = success,
+--     errMsg = err
+--   })
+-- end)
+
+-- -- Weapon component
+-- RegisterNUICallback("weapon_component:onSlotDrop", function(body, resultCallback)
+--   local slots, err = exports.ox_inventory_clothing:ImplCall("WeaponComponent", "OnSlotDrop", body)
+--   resultCallback({
+--     slots = slots,
+--     errMsg = err
+--   })
+-- end)
+
+-- RegisterNUICallback("weapon_component:onSlotClick", function(body, resultCallback)
+--   local slots, err = exports.ox_inventory_clothing:ImplCall("WeaponComponent", "RemoveSlot", body)
+--   resultCallback({
+--     slots = slots,
+--     errMsg = err
+--   })
+-- end)
+
+-- RegisterNUICallback("weaponComponent:setSelectedWeapon", function(body, resultCallback)
+--   local slots = exports.ox_inventory_clothing:ImplCall("WeaponComponent", "OnSelectWeapon", body)
+--   print("slots", json.encode(slots))
+--   resultCallback(slots)
+-- end)
+
+-- return PlayerClothe

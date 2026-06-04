@@ -1,0 +1,52 @@
+<div :style="{width:getMaxWidth+'px'}" v-if="hudSettings.showWatermark" class="info"
+    :class="{hovered:hoveredSettingsElement == 'info' || selectedSettingsElement == 'info'}">
+    <div class="info-wrapper">
+
+        <div class="server-info" :style="getServerInfoBoxStyle" v-if="!hudSettings.hideServerInfo">
+            <div class="player-name-container">
+                <h1>{{waterMarkInformations.discordlink}}</h1>
+                <p>{{formattedDate}}</p>
+            </div>
+            <div class="line"></div>
+            <div class="server-name-container">
+                <h1>{{waterMarkInformations.servername}}</h1>
+                <p>Online - {{playersAmount}}</p>
+            </div>
+            <div class="line"></div>
+            <div class="server-logo-container">
+                <img class="logo" :src="waterMarkInformations.logo">
+                <img class="blur-img" :src="waterMarkInformations.logo">
+            </div>
+        </div>
+        <div class="name-box" :style="getNameBoxStyle" v-if="!hudSettings.hideCharacterInfo">
+            <h1>{{player_name}} - {{ hudSettings.streamerMode && !hudSettings.showMyPlayerId ? '**' : id}}</h1>
+            <div id="timer"></div>
+            <p>{{FormatJob}}</p>
+        </div>
+        <div class="money-container">
+            <div class="money-box bank bank-box" :style="getBankBoxStyle" v-if="!hudSettings.hideBankMoney && forceAccountsVisibility.bank">
+                <inlinesvg src="./app/pages/info/images/bank-icon.svg"></inlinesvg>
+                <p>${{numberWithSpaces(accounts.bank)}}</p>
+            </div>
+            <div class="money-box cash cash-box" :style="getCashBoxStyle" v-if="!hudSettings.hideCashMoney && forceAccountsVisibility.cash">
+                <inlinesvg src="./app/pages/info/images/cash-icon.svg"></inlinesvg>
+                <p>${{numberWithSpaces(accounts.cash)}}</p>
+            </div>
+            <div class="money-box boss-money-box" :style="getBossMoneyBoxStyle" v-if="!hudSettings.hideSocietyMoney && forceAccountsVisibility.boss_money">
+                <inlinesvg src="./app/pages/info/images/boss-money.svg"></inlinesvg>
+                <p>${{numberWithSpaces(accounts.boss_money)}}</p>
+            </div>
+            <div class="money-box black-money-box" :style="getBlackMoneyBoxStyle" v-if="!hudSettings.hideBlackMoney && forceAccountsVisibility.black_money">
+                <inlinesvg src="./app/pages/info/images/black_money.svg"></inlinesvg>
+                <p>${{numberWithSpaces(accounts.black_money)}}</p>
+            </div>
+            <div class="vip-money-box" :style="getVipMoneyBoxStyle" v-if="!hudSettings.hideVipCoinMoney && forceAccountsVisibility.vip_money">
+                <inlinesvg src="./app/pages/info/images/vip-money.svg"></inlinesvg>
+    
+                <p>${{numberWithSpaces(accounts.vip_money)}}</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>

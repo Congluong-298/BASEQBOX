@@ -1,0 +1,16 @@
+{
+    "not_on_channel": "Bạn chưa kết nối với kênh nào cả",
+    "on_channel": "Ôi, bạn đã kết nối với kênh này rồi mà!",
+    "joined_radio": "Bạn đã kết nối với: ",
+    "restricted_channel": "Huhu, bạn không thể kết nối với kênh này đâu",
+    "invalid_channel": "Tần số này không khả dụng nữa rồi",
+    "left_channel": "Bạn đã rời khỏi kênh rồi nhé",
+    "min_volume": "Radio đang ở mức âm lượng thấp nhất rồi!",
+    "max_volume": "Âm lượng đã ở mức cao nhất rồi!",
+    "new_volume": "Âm lượng mới: ",
+    "new_channel": "Kênh mới: ",
+    "clicksOn": "Tiếng nhấp mic đã bật rồi nè!",
+    "clicksOff": "Tiếng nhấp mic đã tắt rồi nha!",
+    "failed_spawn": "Không thể tạo ra radioprop được!",
+    "failed_get_control": "Không thể lấy quyền điều khiển radio đâu!"
+}
