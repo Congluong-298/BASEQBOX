@@ -83,3 +83,10 @@ lib.callback.register('qbx_core:client:getVehicleClasses', function()
     end
     return classes
 end)
+
+CreateThread(function()
+	RegisterFontFile('Oswald')
+    FontId = RegisterFontId("in")
+	AddTextEntry('STRING', "<FONT FACE='Oswald'>~a~</FONT>")
+	AddTextEntry('CUSTOM_STRING', "<FONT FACE='Oswald'>~a~</FONT>")
+end)
