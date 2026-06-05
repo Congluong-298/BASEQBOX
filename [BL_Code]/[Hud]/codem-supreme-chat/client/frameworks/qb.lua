@@ -1,0 +1,11 @@
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
+AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+    Wait(1000)
+    TriggerServerEvent('codem-supreme-chat:server:GetPlayerData')
+end)
+
+RegisterNetEvent('QBCore:Client:OnJobUpdate')
+AddEventHandler('QBCore:Client:OnJobUpdate', function()
+    Wait(1000)
+    TriggerServerEvent('codem-supreme-chat:server:GetPlayerData')
+end)

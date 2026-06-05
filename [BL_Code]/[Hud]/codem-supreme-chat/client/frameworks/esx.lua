@@ -1,0 +1,11 @@
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function()
+    Wait(1000)
+    TriggerServerEvent('codem-supreme-chat:server:GetPlayerData')
+end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function()
+    Wait(1000)
+    TriggerServerEvent('codem-supreme-chat:server:GetPlayerData')
+end)
