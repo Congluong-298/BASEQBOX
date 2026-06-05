@@ -12,9 +12,7 @@ REPORTS = {}
 function OnAdmin(permission, cb)
     for k, v in pairs(exports.qbx_core:GetQBPlayers()) do
         if IsPlayerAceAllowed(k, permission) then
-            if exports.qbx_core:IsOptin(k) then
-                cb(v)
-            end
+            cb(v)
         end
     end
 end
@@ -55,7 +53,6 @@ end
 
 RegisterNetEvent('qbx_admin:server:sendReply', function(report, message)
     if not IsPlayerAceAllowed(source, config.commandPerms.reportReply) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     for k, v in pairs(REPORTS) do
         if v.id == report.id then
@@ -77,7 +74,6 @@ end)
 
 RegisterNetEvent('qbx_admin:server:deleteReport', function(report)
     if not IsPlayerAceAllowed(source, config.commandPerms.reportReply) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     for k, v in pairs(REPORTS) do
         if v.id == report.id then
@@ -122,7 +118,6 @@ local generalOptions = {
 }
 RegisterNetEvent('qbx_admin:server:playerOptionsGeneral', function(selected, selectedPlayer, input)
     if not IsPlayerAceAllowed(source, config.eventPerms.playerOptionsGeneral) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     ---@diagnostic disable-next-line: redundant-parameter
     generalOptions[selected](selectedPlayer, source, input)
@@ -131,13 +126,10 @@ end)
 local administrationOptions = {
     function(source, selectedPlayer, input)
         if not IsPlayerAceAllowed(source, config.eventPerms.kick) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-        if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
-
         DropPlayer(selectedPlayer.id, input)
     end,
     function(source, selectedPlayer, input)
         if not IsPlayerAceAllowed(source, config.eventPerms.ban) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-        if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
         local banDuration = (input[2] or 0) * 3600 + (input[3] or 0) * 86400 + (input[4] or 0) * 2629743
         DropPlayer(selectedPlayer.id, locale('player_options.administration.banreason', input[1], os.date('%c', os.time() + banDuration)))
         MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
@@ -147,7 +139,6 @@ local administrationOptions = {
     end,
     function(source, selectedPlayer, input)
         if not IsPlayerAceAllowed(source, config.eventPerms.changePerms) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-        if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
         if input == 'remove' then exports.qbx_core:RemovePermission(selectedPlayer.id) else exports.qbx_core:AddPermission(selectedPlayer.id, input) end
     end,
 }
@@ -191,8 +182,6 @@ RegisterNetEvent('qbx_admin:server:changePlayerData', function(selected, selecte
     local target = exports.qbx_core:GetPlayer(selectedPlayer.id)
 
     if not IsPlayerAceAllowed(source, config.eventPerms.changePlayerData) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
-
     if not target then return end
 
     playerDataOptions[selected](target, input)
@@ -203,7 +192,6 @@ RegisterNetEvent('qbx_admin:server:giveAllWeapons', function(weaponType, playerI
     local target = exports.qbx_core:GetPlayer(src)
 
     if not IsPlayerAceAllowed(source, config.eventPerms.giveAllWeapons) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     for i = 1, #config.weaponList[weaponType], 1 do
         target.Functions.AddItem(config.weaponList[weaponType][i], 1)
@@ -215,7 +203,6 @@ lib.callback.register('qbx_admin:callback:getradiolist', function(source, freque
     local players = {}
 
     if not IsPlayerAceAllowed(source, config.eventPerms.getRadioList) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     for targetSource, _ in pairs(list) do -- cheers Knight who shall not be named
         local player = exports.qbx_core:GetPlayer(targetSource)
@@ -229,7 +216,6 @@ end)
 
 lib.callback.register('qbx_admin:server:getPlayers', function(source)
     if not IsPlayerAceAllowed(source, config.eventPerms.useMenu) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     local players = {}
     for k, v in pairs(exports.qbx_core:GetQBPlayers()) do
@@ -259,7 +245,6 @@ end)
 
 lib.callback.register('qbx_admin:server:getPlayer', function(source, playerToGet)
     if not IsPlayerAceAllowed(source, config.eventPerms.useMenu) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
 
     local playerData = exports.qbx_core:GetPlayer(playerToGet).PlayerData
     local player = {
@@ -285,8 +270,10 @@ lib.callback.register('qbx_admin:server:getPlayer', function(source, playerToGet
 end)
 
 lib.callback.register('qbx_admin:server:clothingMenu', function(source, target)
-    if not IsPlayerAceAllowed(source, config.eventPerms.clothingMenu) then  exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return false end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return false end
+    if not IsPlayerAceAllowed(source, config.eventPerms.clothingMenu) then
+        exports.qbx_core:Notify(source, locale('error.no_perms'), 'error')
+        return false
+    end
 
     TriggerClientEvent('qb-clothing:client:openMenu', target)
 
@@ -294,16 +281,15 @@ lib.callback.register('qbx_admin:server:clothingMenu', function(source, target)
 end)
 
 lib.callback.register('qbx_admin:server:canUseMenu', function(source)
-    if not IsPlayerAceAllowed(source, config.eventPerms.useMenu) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return false end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return false end
+    if not IsPlayerAceAllowed(source, config.eventPerms.useMenu) then
+        exports.qbx_core:Notify(source, locale('error.no_perms'), 'error')
+        return false
+    end
 
     return true
 end)
 
 lib.callback.register('qbx_admin:server:spawnVehicle', function(source, model)
-    if not IsPlayerAceAllowed(source, config.commandPerms.spawnVehicle) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
-
     local ped = GetPlayerPed(source)
     local netId, vehicle = qbx.spawnVehicle({
         model = model,
@@ -311,12 +297,11 @@ lib.callback.register('qbx_admin:server:spawnVehicle', function(source, model)
         warp = true,
     })
 
-    exports.qbx_vehiclekeys:GiveKeys(source, vehicle)
-    return netId
+    return netId, vehicle
 end)
 
 lib.callback.register('qbx_admin:server:getReports', function(source)
     if not IsPlayerAceAllowed(source, config.commandPerms.reportReply) then exports.qbx_core:Notify(source, locale('error.no_perms'), 'error') return end
-    if not exports.qbx_core:IsOptin(source) then exports.qbx_core:Notify(source, locale('error.not_optin'), 'error') return end
+
     return REPORTS
 end)

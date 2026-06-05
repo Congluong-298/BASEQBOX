@@ -13,6 +13,7 @@ shared_scripts {
 }
 
 server_scripts {
+    'server/utils/cache_old.js',
     '@oxmysql/lib/MySQL.lua',
     'server/*.lua',
 }

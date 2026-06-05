@@ -35,25 +35,108 @@ return {
         }
     }
 },
-
-['cappuccino'] = {
-    label = 'Cappuccino',
-    weight = 250,
-    stack = true,
-    close = true,
-    description = 'Espresso phủ bọt sữa hấp',
-    client = {
-        image = 'cappuccino.png',
-        usetime = 2500,
-        prop = {
-            model = 'prop_coffee_cup',
-            pos = vec3(0.06, 0.04, 0.06),
-            rot = vec3(220.0, 0.0, 0.0)
-        },
-        anim = {
-            dict = 'amb@world_human_aa_coffee@idle_a',
-            clip = 'idle_a'
-            }
+    ["boombox_white_large"] = {
+        label = "Large Boombox",
+        weight = 160,
+    },
+    ["boombox_red_large"] = {
+        label = "Large Boombox",
+        weight = 160,
+    },
+    ["boombox_purple_large"] = {
+        label = "Large Boombox (Purple)",
+        weight = 160,
+    },
+    ["boombox_pink_large"] = {
+        label = "Large Boombox (Pink)",
+        weight = 160,
+    },
+    ["boombox_orange_large"] = {
+        label = "Large Boombox (Orange)",
+        weight = 160,
+    },
+    ["boombox_green_large"] = {
+        label = "Large Boombox (Green)",
+        weight = 160,
+    },
+    ["boombox_blue_large"] = {
+        label = "Large Boombox (Blue)",
+        weight = 160,
+    },
+    ["boombox_white_medium"] = {
+        label = "Medium Boombox (White)",
+        weight = 160,
+    },
+    ["boombox_red_medium"] = {
+        label = "Medium Boombox (Red)",
+        weight = 160,
+    },
+    ["boombox_purple_medium"] = {
+        label = "Medium Boombox (Purple)",
+        weight = 160,
+    },
+    ["boombox_pink_medium"]                     = {
+        label = "Medium Boombox (Pink)",
+        weight = 160,
+    },
+    ["boombox_orange_medium"]                   = {
+        label = "Medium Boombox (Orange)",
+        weight = 160,
+    },
+    ["boombox_green_medium"]                    = {
+        label = "Medium Boombox (Green)",
+        weight = 160,
+    },
+    ["boombox_blue_medium"]                     = {
+        label = "Medium Boombox (Blue)",
+        weight = 160,
+    },
+    ["boombox_white_small"]                     = {
+        label = "Small Boombox (White)",
+        weight = 160,
+    },
+    ["boombox_red_small"]                       = {
+        label = "Small Boombox (Red)",
+        weight = 160,
+    },
+    ["boombox_purple_small"]                    = {
+        label = "Small Boombox (Purple)",
+        weight = 160,
+    },
+    ["boombox_pink_small"] = {
+        label = "Small Boombox (Pink)",
+        weight = 160,
+    },
+    ["boombox_orange_small"] = {
+        label = "Small Boombox (Orange)",
+        weight = 160,
+    },
+    ["boombox_green_small"] = {
+        label = "Small Boombox (Green)",
+        weight = 160,
+    },
+    ["boombox_blue_small"] = {
+        label = "Small Boombox (Blue)",
+        weight = 160,
+    },
+    ['cappuccino'] = {
+        label = 'Cappuccino',
+        weight = 250,
+        stack = true,
+        close = true,
+        description = 'Espresso phủ bọt sữa hấp',
+        client = {
+            image = 'cappuccino.png',
+            usetime = 2500,
+            prop = {
+                model = 'prop_coffee_cup',
+                pos = vec3(0.06, 0.04, 0.06),
+                rot = vec3(220.0, 0.0, 0.0)
+            },
+            anim = {
+                dict = 'amb@world_human_aa_coffee@idle_a',
+                clip = 'idle_a'
+                }
         }
     },
 
@@ -334,8 +417,6 @@ return {
 	-- 	label = 'Thẻ ngành',
 	-- 	weight = 10,
 	-- },
-
-
 	['bandage'] = {
 		label = 'Băng y tế',
 		weight = 100,
@@ -786,124 +867,93 @@ return {
 	-- 	}
 	-- },
     ["cryptostick"] = {
-    label = "Crypto Stick",
-    weight = 50,
-    stack = false,
-},
+        label = "Crypto Stick",
+        weight = 50,
+        stack = false,
+    },
+    ["phone_dongle"] = {
+        label = "Phone Dongle",
+        weight = 50,
+        stack = false,
+    },
 
-["phone_dongle"] = {
-    label = "Phone Dongle",
-    weight = 50,
-    stack = false,
-},
+    ["powerbank"] = {
+        label = "Power Bank",
+        weight = 50,
+        stack = false,
+    },
 
-["powerbank"] = {
-    label = "Power Bank",
-    weight = 50,
-    stack = false,
-},
+    ['phone'] = {
+        label = 'Điện thoại cơ bản',
+        weight = 150,
+        stack = false,
+        consume = 0,
+        -- client = {
+        --     export = "qs-smartphone-pro.UsePhoneItem",
+        --     add = function(total)
+        --         TriggerServerEvent('phone:itemAdd')
+        --     end,
 
-['phone'] = {
-    label = 'Điện thoại cơ bản',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
+        --     remove = function(total)
+        --         TriggerServerEvent('phone:itemDelete')
+        --     end
+        -- }
+    },
 
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
+    ['black_phone'] = {
+        label = 'Black Phone',
+        weight = 150,
+        stack = false,
+        consume = 0,
+        -- client = {
+        --     export = "qs-smartphone-pro.UsePhoneItem",
+        --     add = function(total)
+        --         TriggerServerEvent('phone:itemAdd')
+        --     end,
 
-['black_phone'] = {
-    label = 'Black Phone',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
+        --     remove = function(total)
+        --         TriggerServerEvent('phone:itemDelete')
+        --     end
+        -- }
+    },
 
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
+    ['yellow_phone'] = {
+        label = 'Yellow Phone',
+        weight = 150,
+        stack = false,
+        consume = 0,
+        -- client = {
+        --     export = "qs-smartphone-pro.UsePhoneItem",
+        --     add = function(total)
+        --         TriggerServerEvent('phone:itemAdd')
+        --     end,
 
-['yellow_phone'] = {
-    label = 'Yellow Phone',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
+        --     remove = function(total)
+        --         TriggerServerEvent('phone:itemDelete')
+        --     end
+        -- }
+    },
 
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
+    ['red_phone'] = {
+        label = 'Điện thoại Đỏ',
+        weight = 150,
+        stack = false,
+        consume = 0,
+    },
 
-['red_phone'] = {
-    label = 'Điện thoại Đỏ',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
+    ['green_phone'] = {
+        label = 'Green Phone',
+        weight = 150,
+        stack = false,
+        consume = 0,
+    },
 
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
-
-['green_phone'] = {
-    label = 'Green Phone',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
-
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
-
-['white_phone'] = {
-    label = 'Điện thoại trắng',
-    weight = 150,
-    stack = false,
-    consume = 0,
-    client = {
-        export = "qs-smartphone-pro.UsePhoneItem",
-        add = function(total)
-            TriggerServerEvent('phone:itemAdd')
-        end,
-
-        remove = function(total)
-            TriggerServerEvent('phone:itemDelete')
-        end
-    }
-},
+    ['white_phone'] = {
+        label = 'Điện thoại trắng',
+        weight = 150,
+        stack = false,
+        consume = 0,
+    },
 
 	['money'] = {
 		label = 'Tiền mặt',
@@ -1020,7 +1070,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_tshirt"] = {
@@ -1030,7 +1080,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_arms"] = {
@@ -1040,7 +1090,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_pants"] = {
@@ -1050,7 +1100,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_shoes"] = {
@@ -1060,7 +1110,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_decals"] = {
@@ -1070,7 +1120,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_ears"] = {
@@ -1080,7 +1130,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_mask"] = {
@@ -1090,7 +1140,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_bproof"] = {
@@ -1100,7 +1150,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_chain"] = {
@@ -1110,7 +1160,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_bags"] = {
@@ -1120,7 +1170,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_glasses"] = {
@@ -1130,7 +1180,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_watches"] = {
@@ -1140,7 +1190,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_bracelets"] = {
@@ -1150,7 +1200,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
 	["cloth_helmet"] = {
@@ -1160,7 +1210,7 @@ return {
 		close = false,
 		consume = 0,
 		client = {
-			export = 'LUANest_Clothes.clothes'
+			export = 'BL_Clothes.clothes'
 		},
 	},
     ["clothes"] = {
@@ -1172,7 +1222,7 @@ return {
     	client = {
     		anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
     		usetime = 2500,
-    		export = 'LUANest_Clothes.useClothes'
+    		export = 'BL_Clothes.useClothes'
     	}
     },
     ["advancedrepairkit"] = {
